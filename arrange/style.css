@@ -7,10 +7,14 @@
     --sec: 2vw;
     --min: 5vw;
     --hour: 10vw;
+    --seccolor: #307789; 
+    --mincolor: #68b7c2;
+    --hourcolor: #a2e5c3;
 }
 
 body {
     width: 100vw;
+    background-color: ghostwhite;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -89,7 +93,7 @@ body {
     padding: 0 20vw; */
     
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -102,21 +106,21 @@ body {
 }
 
 .secDot {
-    background-color: blue;
+    background-color: var(--seccolor);
     width: var(--sec);
     height: var(--sec);
     z-index: 3;
 }
 
 .minDot {
-    background-color: lightblue;
+    background-color: var(--mincolor);
     width: var(--min);
     height: var(--min);
     z-index: 2;
 }
 
 .hourDot {
-    background-color: lightgreen;
+    background-color: var(--hourcolor);
     width: var(--hour);
     height: var(--hour);
     z-index: 1;
