@@ -1,6 +1,6 @@
 @font-face {
     font-family: Dusseldot;
-    src: url(./fonts/Dusseldot-Variable-Trial.ttf);
+    src: url(/fonts/Dusseldot-Variable-Trial.ttf);
 }
 
 :root {
@@ -18,7 +18,7 @@ body {
 .headings {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-evenly ;
     height: 95vh;
     top: 2.5vh;
     position: relative;
@@ -90,12 +90,13 @@ body {
     
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .secDot,
 .minDot,
 .hourDot {
-    position: absolute;
+    position: static;
     border-radius: 100%;
     transition: 1s ease-in-out;
 }
@@ -130,12 +131,6 @@ body {
     animation-fill-mode: backwards;
   }
   
-.secDot:hover,
-.minDot:hover,
-.hourDot:hover {
-    opacity: 0.5;
-}
-
   @keyframes animate-fade {
     0% {
         opacity: 0; 

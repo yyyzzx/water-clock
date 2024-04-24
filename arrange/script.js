@@ -180,29 +180,3 @@ for (let hour of hours) {
     hour.style.left = randomLeft + "vw";
 }
 
-// //arrange button 
-// function arrangeCircles(){
-//     let allContainer = document.getElementById("all-container");
-//     allContainer.classList.toggle("arrange");
-
-
-
-//     // removeEventListener(secLocation);
-//     // let secContainer = document.getElementById('sec-container');
-
-//     let hours = document.querySelectorAll(".hourDot")
-//     for (let hour of hours) {
-//         hour.style.position = "static";
-//         hour.classList.toggle("arrange-dot");
-//     }
-//     let minutes = document.querySelectorAll(".minDot")
-//     for (let minute of minutes) {
-//         minute.style.position = "static";
-//         minute.classList.toggle("arrange-dot");
-//     }
-//     let seconds = document.querySelectorAll(".secDot")
-//     for (let second of seconds) {
-//         second.style.position = "static";
-//         second.classList.toggle("arrange-dot");
-//     }
-// }
