@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Dusseldot;
+    src: url(./fonts/Dusseldot-Variable-Trial.ttf);
+}
+
+:root {
+    --sec: 2vw;
+    --min: 5vw;
+    --hour: 10vw;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    height: 95vh;
+    top: 2.5vh;
+    position: relative;
+}
+
+#timeHere,
+#waterHere {
+    font-family: "Dusseldot";
+    font-size: 80pt;
+    text-align: center;
+    font-variation-settings: "wdth" 150;
+    transition: 1s;
+    z-index: 1;
+    line-height: 80pt;
+}
+
+#timeHere {
+    margin-bottom: 65vh;
+}
+
+#timeHere:hover,
+#waterHere:hover {
+    font-variation-settings: "wdth" 210;
+    opacity: 0;
+    transition: 1s;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav {
+    font-family: "Dusseldot";
+    font-variation-settings: "wdth" 150;
+    font-size: 37pt;
+    line-height: 80pt;
+    opacity: 0.8;
+    margin: 0 5vw 0 5vw;
+}
+
+.container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+/* #sec-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+} */
+
+#sec-container,
+#min-container,
+#hour-container {
+    /* width: 100vw;
+    padding: 0 20vw; */
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.secDot,
+.minDot,
+.hourDot {
+    position: absolute;
+    border-radius: 100%;
+    transition: 1s ease-in-out;
+}
+
+.secDot {
+    background-color: blue;
+    width: var(--sec);
+    height: var(--sec);
+    z-index: 3;
+}
+
+.minDot {
+    background-color: lightblue;
+    width: var(--min);
+    height: var(--min);
+    z-index: 2;
+}
+
+.hourDot {
+    background-color: lightgreen;
+    width: var(--hour);
+    height: var(--hour);
+    z-index: 1;
+}
+
+.secDot,
+.minDot,
+.hourDot {
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes animate-fade {
+    0% {
+        opacity: 0; 
+        transform: scale(0.5);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+  }
+
+.disappear {
+    opacity: 0;
+}
+
+#btn {
+    font-family: "Dusseldot";
+    font-size: 20pt;
+    text-align: center;
+    font-variation-settings: "wdth" 150;
+    border: black 1px solid;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.arrange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    position: absolute;
+    left: 5vw;
+}
+
+.arrange-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.arrange-dot {
+    position: static;
+    color: red;
+    opacity: 1;
+}
+
