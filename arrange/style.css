@@ -1,6 +1,6 @@
 @font-face {
     font-family: Dusseldot;
-    src: url(../fonts/Dusseldot-Variable-Trial.ttf);
+    src: url(fonts/Dusseldot-Variable-Trial.ttf);
 }
 
 :root {
@@ -33,7 +33,7 @@ body {
     transition: 1s;
     z-index: 1;
     line-height: 80pt;
-    transition:  1.5s;
+    transition:  2s;
 }
 
 #timeHere {
