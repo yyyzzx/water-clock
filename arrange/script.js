@@ -205,6 +205,20 @@ function closeAbout() {
     aboutButton.classList.remove("clicked");
 }
 
+//random color when hovering buttom
+function randomBtnColor() {
+    let backButton = document.getElementById("closebtn");
+    let btnPalette = ["#307789", "#68b7c2", "#a2e5c3"];
+    let randomBtnColor = Math.floor(Math.random() * btnPalette.length);
+    backButton.style.backgroundColor = btnPalette[randomBtnColor];
+}
+
+//back to original button style when not on hover
+let backButton = document.getElementById("closebtn");
+backButton.onmouseout = function styleBack() {
+    let backButton = document.getElementById("closebtn");
+    backButton.style.backgroundColor = "ghostwhite";
+}
 
 //random dot color on about page
 function updateSpotColor() {

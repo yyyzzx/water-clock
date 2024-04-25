@@ -264,8 +264,8 @@ body {
 }
 
 .close:hover, #closebtn:hover {
-    background-color: black;
-    color: ghostwhite;
+    /* background-color: black; */
+    /* color: ghostwhite; */
     transition: 0.5s;
 }
 

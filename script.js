@@ -195,7 +195,7 @@ function showAbout() {
 //close button 
 function closeAbout() {
     let aboutButton = document.getElementById("aboutbtn");
-    let backButton = document.getElementById("backbtn");
+    // let backButton = document.getElementById("closebtn");
     let about = document.getElementById("about");
     let allContainer = document.getElementById("all-container");
     about.style.opacity = "0";
@@ -203,6 +203,21 @@ function closeAbout() {
     allContainer.style.opacity = "1";
     allContainer.style.transition = "2s";
     aboutButton.classList.remove("clicked");
+}
+
+//random color when hovering buttom
+function randomBtnColor() {
+    let backButton = document.getElementById("closebtn");
+    let btnPalette = ["#307789", "#68b7c2", "#a2e5c3"];
+    let randomBtnColor = Math.floor(Math.random() * btnPalette.length);
+    backButton.style.backgroundColor = btnPalette[randomBtnColor];
+}
+
+//back to original button style when not on hover
+let backButton = document.getElementById("closebtn");
+backButton.onmouseout = function styleBack() {
+    let backButton = document.getElementById("closebtn");
+    backButton.style.backgroundColor = "ghostwhite";
 }
 
 //random dot color on about page
