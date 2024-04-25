@@ -255,7 +255,7 @@ body {
 
 .close, #closebtn {
     text-align: center;
-    border: 1.2px black dotted;
+    border: 2px black dotted;
     padding: 0 1.5vw;
     border-radius: 20px;
     transition: 0.5s;
@@ -292,5 +292,53 @@ body {
         font-size: clamp(8pt, 1.2vw, 1.3vw);
         font-variation-settings: "wght" 200, "wdth" 150;
         padding: 2.5vw 1.8vw 1vw 4vw;
+    }
+    #aboutbtn {
+        line-height: 5vw;
+    }
+    .dot {
+        height: clamp(1.2vw, 1.2vw, 10pt);
+        width: clamp(1.2vw, 1.2vw, 10pt);
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    :root {
+        --heading-fontsize: clamp(20pt, 15vw, 85pt);
+    }
+    .nav {
+        font-size: clamp(5pt, 3.2vw, 32pt);
+        line-height: 7vw;
+        text-align: center;
+    }
+    #about {
+        height: 49vh;
+        width: 78vw;
+        font-size: clamp(8pt, 1.2vw, 1.3vw);
+        font-variation-settings: "wght" 200, "wdth" 150;
+        padding: 4.5vw 1.8vw 2vw 4vw;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: flex-start;
+        width: 100vw;
+        height: 30vw;
+    }
+    #aboutbtn {
+        position: relative;
+        line-height: 4vw;
+        margin: 0;
+        top: 2vw;
+    }
+    .dot {
+        height: clamp(1.2vw, 1.5vw, 10pt);
+        width: clamp(1.2vw, 1.5vw, 10pt);
+    }
+    .close, #closebtn {
+        border: 2px black dotted;
+        padding: 0 2vw;
+        border-radius: 15px;
     }
   }

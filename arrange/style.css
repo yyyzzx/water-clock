@@ -10,6 +10,7 @@
     --seccolor: #307789; 
     --mincolor: #68b7c2;
     --hourcolor: #a2e5c3;
+    --heading-fontsize: clamp(20pt, 7vw, 85pt);
 }
 
 body {
@@ -22,7 +23,8 @@ body {
 .headings {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly ;
+    justify-content: space-between;
+    align-items: center;
     height: 95vh;
     top: 2.5vh;
     position: relative;
@@ -31,17 +33,13 @@ body {
 #timeHere,
 #waterHere {
     font-family: "Dusseldot";
-    font-size: 80pt;
+    font-size: var(--heading-fontsize);
     text-align: center;
     font-variation-settings: "wdth" 150;
     transition: 1s;
     z-index: 1;
     line-height: 80pt;
     transition:  2s;
-}
-
-#timeHere {
-    margin-bottom: 65vh;
 }
 
 #timeHere:hover,
@@ -56,6 +54,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100vw;
 }
 
 .nav {
@@ -80,21 +79,11 @@ body {
     z-index: -1;
 }
 
-/* #sec-container {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-} */
-
 #sec-container,
 #min-container,
 #hour-container {
-    /* width: 100vw;
-    padding: 0 20vw; */
-    
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .secDot,
@@ -146,21 +135,7 @@ body {
     }
   }
 
-.disappear {
-    opacity: 0;
-}
-
-#btn {
-    font-family: "Dusseldot";
-    font-size: 20pt;
-    text-align: center;
-    font-variation-settings: "wdth" 150;
-    border: black 1px solid;
-    border-radius: 20px;
-    padding: 5px 15px;
-}
-
-.arrange {
+  .arrange {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,11 +151,188 @@ body {
     flex-direction: row;
 }
 
-.arrange-dot {
-    position: static;
-    color: red;
-    opacity: 1;
-    height: var(--sec);
-    width: var(--sec);
+#about {
+    background-color: ghostwhite;
+    height: 62vh;
+    width: 75vw;
+    border: black dotted 3px;
+    border-radius: 10vw 1vw;
+    font-family: "Dusseldot";
+    font-size: 12pt;
+    font-variation-settings: "wght" 200, "wdth" 150;
+    padding: 2.5vw 1.8vw 1vw 4vw;
+    line-height: 22pt;
+    /* overflow-y: scroll; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
 }
 
+.dot {
+    height: 12pt;
+    width: 12pt;
+    background-color: black;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+#about a {
+    transition: 0.5s;
+    border-bottom: 1.5px dotted black;
+}
+
+#about a:hover {
+    font-variation-settings: "wght" 100, "wdth" 200;
+    transition: 0.5s ease-in-out;
+    border-bottom: none;
+}
+
+#aboutbtn,
+.nav {
+    transition: 1s;
+}
+
+#aboutbtn:hover,
+.nav:hover {
+    font-variation-settings: "wdth" 210;
+    transition: 1s;
+}
+
+.explanation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#second,
+#minute,
+#hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.sec-dot {
+    background-color: var(--seccolor);
+    width: var(--sec);
+    height: var(--sec);
+    border-radius: 100%;
+    margin-bottom: 8px;
+}
+
+.min-dot {
+    background-color: var(--mincolor);
+    width: var(--min);
+    height: var(--min);
+    border-radius: 100%;
+    margin-bottom: 8px;
+}
+
+.hour-dot {
+    background-color: var(--hourcolor);
+    width: var(--hour);
+    height: var(--hour);
+    border-radius: 100%;
+    margin-bottom: 8px;
+}
+
+.clicked {
+    border: 3.5px black dotted;
+    border-radius: 20px;
+    padding: 5px 12px;
+    line-height: 40pt;
+    background-color: ghostwhite;
+    opacity: 1;
+}
+
+.close, #closebtn {
+    text-align: center;
+    border: 2px black dotted;
+    padding: 0 1.5vw;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-variation-settings: "wght" 200, "wdth" 150;
+}
+
+.close:hover, #closebtn:hover {
+    background-color: black;
+    color: ghostwhite;
+    transition: 0.5s;
+}
+
+.centerbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disappear {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1500px) {
+    :root {
+        --heading-fontsize: clamp(20pt, 6.5vw, 85pt);
+    }
+    .nav {
+        font-size: clamp(5pt, 3.2vw, 32pt);
+        margin-bottom: 2vw;
+    }
+    #about {
+        height: 62vh;
+        width: 75vw;
+        font-size: clamp(8pt, 1.2vw, 1.3vw);
+        font-variation-settings: "wght" 200, "wdth" 150;
+        padding: 2.5vw 1.8vw 1vw 4vw;
+    }
+    .dot {
+        height: clamp(1.2vw, 1.2vw, 10pt);
+        width: clamp(1.2vw, 1.2vw, 10pt);
+    }
+    #aboutbtn {
+        line-height: 5vw;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    :root {
+        --heading-fontsize: clamp(20pt, 15vw, 85pt);
+    }
+    .nav {
+        font-size: clamp(5pt, 3.2vw, 32pt);
+        line-height: 7vw;
+        text-align: center;
+    }
+    #about {
+        height: 49vh;
+        width: 78vw;
+        font-size: clamp(8pt, 1.2vw, 1.3vw);
+        font-variation-settings: "wght" 200, "wdth" 150;
+        padding: 4.5vw 1.8vw 2vw 4vw;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: flex-start;
+        width: 100vw;
+        height: 30vw;
+    }
+    #aboutbtn {
+        position: relative;
+        line-height: 4vw;
+        margin: 0;
+        top: 2vw;
+    }
+    .dot {
+        height: clamp(1.2vw, 1.5vw, 10pt);
+        width: clamp(1.2vw, 1.5vw, 10pt);
+    }
+    .close, #closebtn {
+        border: 2px black dotted;
+        padding: 0 2vw;
+        border-radius: 15px;
+    }
+  }

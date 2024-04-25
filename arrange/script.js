@@ -179,3 +179,28 @@ for (let hour of hours) {
     hour.style.left = randomLeft + "vw";
 }
 
+//about button
+function showAbout() {
+    let aboutButton = document.getElementById("aboutbtn");
+    let backButton = document.getElementById("backbtn");
+    let about = document.getElementById("about");
+    let allContainer = document.getElementById("all-container");
+    about.style.opacity = "1";
+    about.style.transition = "1s";
+    allContainer.style.opacity = "0.3";
+    allContainer.style.transition = "2s";
+    aboutButton.classList.add("clicked");
+}
+
+//close button 
+function closeAbout() {
+    let aboutButton = document.getElementById("aboutbtn");
+    let backButton = document.getElementById("backbtn");
+    let about = document.getElementById("about");
+    let allContainer = document.getElementById("all-container");
+    about.style.opacity = "0";
+    about.style.transition = "1s";
+    allContainer.style.opacity = "1";
+    allContainer.style.transition = "2s";
+    aboutButton.classList.remove("clicked");
+}
