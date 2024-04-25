@@ -45,7 +45,6 @@ body {
 #timeHere:hover,
 #waterHere:hover {
     font-variation-settings: "wdth" 210;
-    /* opacity: 0; */
     transition: 1s;
     cursor: none;
     font-size: 5vw;
@@ -169,7 +168,6 @@ body {
     font-variation-settings: "wght" 200, "wdth" 150;
     padding: 2.5vw 1.8vw 1vw 4vw;
     line-height: 20pt;
-    /* overflow-y: scroll; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -264,8 +262,6 @@ body {
 }
 
 .close:hover, #closebtn:hover {
-    /* background-color: black; */
-    /* color: ghostwhite; */
     transition: 0.5s;
 }
 
