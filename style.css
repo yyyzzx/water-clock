@@ -167,7 +167,7 @@ body {
     font-size: 12pt;
     font-variation-settings: "wght" 200, "wdth" 150;
     padding: 2.5vw 1.8vw 1vw 4vw;
-    line-height: 22pt;
+    line-height: 20pt;
     /* overflow-y: scroll; */
     display: flex;
     flex-direction: column;
