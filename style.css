@@ -195,14 +195,12 @@ body {
 }
 
 #aboutbtn,
-.nav,
-#closebtn {
+.nav {
     transition: 1s;
 }
 
 #aboutbtn:hover,
-.nav:hover,
-#closebtn:hover {
+.nav:hover {
     font-variation-settings: "wdth" 210;
     transition: 1s;
 }
@@ -265,7 +263,8 @@ body {
 }
 
 .close:hover, #closebtn:hover {
-    font-variation-settings: "wdth" 200;
+    background-color: black;
+    color: ghostwhite;
     transition: 0.5s;
 }
 
