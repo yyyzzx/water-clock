@@ -10,7 +10,7 @@
     --seccolor: #307789; 
     --mincolor: #68b7c2;
     --hourcolor: #a2e5c3;
-    --heading-fontsize: clamp(20pt, 7vw, 85pt);
+    --heading-fontsize: clamp(20pt, 6.8vw, 85pt);
 }
 
 body {
@@ -178,7 +178,7 @@ body {
 .dot {
     height: 12pt;
     width: 12pt;
-    background-color: black;
+    background-color: var(--hourcolor);
     border-radius: 100%;
     display: inline-block;
 }
@@ -314,9 +314,10 @@ body {
     #about {
         height: 49vh;
         width: 78vw;
-        font-size: clamp(8pt, 1.2vw, 1.3vw);
+        font-size: clamp(8pt, 1.1vw, 1.3vw);
         font-variation-settings: "wght" 200, "wdth" 150;
         padding: 4.5vw 1.8vw 2vw 4vw;
+        line-height: 3vw;
     }
     .row {
         display: flex;

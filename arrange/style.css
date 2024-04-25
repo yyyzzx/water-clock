@@ -10,7 +10,7 @@
     --seccolor: #307789; 
     --mincolor: #68b7c2;
     --hourcolor: #a2e5c3;
-    --heading-fontsize: clamp(20pt, 7vw, 85pt);
+    --heading-fontsize: clamp(20pt, 6.8vw, 85pt);
 }
 
 body {
@@ -60,7 +60,7 @@ body {
 .nav {
     font-family: "Dusseldot";
     font-variation-settings: "wdth" 150;
-    font-size: 37pt;
+    font-size: 35pt;
     line-height: 80pt;
     opacity: 0.8;
     margin: 0 5vw 0 5vw;
@@ -314,6 +314,7 @@ body {
         font-size: clamp(8pt, 1.2vw, 1.3vw);
         font-variation-settings: "wght" 200, "wdth" 150;
         padding: 4.5vw 1.8vw 2vw 4vw;
+        line-height: 3vw;
     }
     .row {
         display: flex;

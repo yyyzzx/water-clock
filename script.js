@@ -204,3 +204,15 @@ function closeAbout() {
     allContainer.style.transition = "2s";
     aboutButton.classList.remove("clicked");
 }
+
+//random dot color on about page
+function updateSpotColor() {
+let spots = document.querySelectorAll(".dot");
+for (let spot of spots) {
+    let palette = ["#307789", "#68b7c2", "#a2e5c3"];
+    let randomColor = Math.floor(Math.random() * palette.length);
+    spot.style.backgroundColor = palette[randomColor];
+    spot.style.transition = "1s";
+}
+}
+setInterval(updateSpotColor, 1500);
