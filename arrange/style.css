@@ -45,9 +45,10 @@ body {
 #timeHere:hover,
 #waterHere:hover {
     font-variation-settings: "wdth" 210;
-    opacity: 0;
+    /* opacity: 0; */
     transition: 1s;
     cursor: none;
+    font-size: 5vw;
 }
 
 .row {
@@ -283,6 +284,11 @@ body {
         font-size: clamp(5pt, 3.2vw, 32pt);
         margin-bottom: 2vw;
     }
+    .nav {
+        font-size: clamp(5pt, 3.2vw, 32pt);
+        line-height: 7vw;
+        text-align: center;
+    }
     #about {
         height: 62vh;
         width: 75vw;
@@ -307,6 +313,13 @@ body {
         font-size: clamp(5pt, 3.2vw, 32pt);
         line-height: 7vw;
         text-align: center;
+    }
+    #timeHere:hover,
+    #waterHere:hover {
+    font-variation-settings: "wdth" 210;
+    transition: 1s;
+    cursor: none;
+    font-size: clamp(20pt, 14.8vw, 85pt);
     }
     #about {
         height: 49vh;
