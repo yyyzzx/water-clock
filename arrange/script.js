@@ -41,7 +41,6 @@ if(thisHour < 1){
 }
 if(thisMinute == 0 && thisSecond == 0){
     //update hours
-    hourDot.style.backgroundColor = "red";
     hourDot.innerHTML += "<div class='hourDot'></div>";
 }
 if(thisSecond == 0 && thisMinute % 2 === 0) {

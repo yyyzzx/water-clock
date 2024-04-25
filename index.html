@@ -12,9 +12,7 @@
     <div class="headings">
         <div class="row">
             <div class="nav">
-                <a href="#">
-                    <div class="nav">About</div>
-                </a>
+                <input type="button" class="nav" id="aboutbtn" value="About" onclick="showAbout()">
             </div>
             <div id="timeHere"></div>
             <div class="nav">
@@ -23,17 +21,47 @@
                 </a>
             </div>
         </div>
+        <div class="about" id="about">
+            <section>
+                On average, at this time displayed above, this amount of water displayed below has been consumed by each person in New York City.
+            </section>
+            <section class="explanation">
+                    <div id="hour">
+                    <div class="hour-dot"></div>
+                    <div>equals to 18927 ml</div>
+                    <div>appears per 1 hour</div>
+                </div>
+                <div id="minute">
+                    <div class="min-dot"></div>
+                    <div>equals to 631 ml</div>
+                    <div>appears per 2 minutes</div>
+                </div>                
+                <div id="second">
+                    <div class="sec-dot"></div>
+                    <div>equals to 26 ml</div>
+                    <div>appears per 5 seconds</div>
+                </div>
+            </section>
+            <section class="colophon">
+                Water Clock is designed and hardcoded by Jiajin Ye <div class="dot"></div> 
+                during the Spring of 2024 <div class="dot"></div> 
+                for the course core 2: interaction <div class="dot"></div> 
+                at parsons school of design <div class="dot"></div>
+                data collected from the dataset in 2022 on water consumption in the city of new york by <a href="https://data.cityofnewyork.us/Environment/Water-Consumption-in-the-City-of-New-York/ia2d-e54m/about_data">NYC Open Data</a> <div class="dot"></div> 
+                the typeface used is <a href="https://tomorrow.type.today/en/dusseldot">Dusseldot</a> from <a href="https://tomorrow.type.today/en">type.tomorrow</a> <div class="dot"></div> 
+                this site is hosted on <a href="https://pages.github.com">Github.pages</a> <div class="dot"></div> 
+            </section>
+            <section class="centerbtn">
+                <input type="button" class="close" id="closebtn" value="Close" onclick="closeAbout()">
+            </section>
+        </div>
         <div id="waterHere"></div>
     </div>
 
     <div id="all-container" class="container">
-
         <div id="sec-container"></div>
         <div id="min-container"></div>
         <div id="hour-container"></div>
-
-        <!-- <button id="btn">Arrange</button> -->
-
     </div>
     
     <script src="neontext.min.js"></script>
