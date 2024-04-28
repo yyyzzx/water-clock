@@ -207,6 +207,27 @@ body {
     justify-content: space-between;
 }
 
+#hour span,
+#minute span,
+#second span {
+    border-radius: 20px;
+    padding: 0 5px;
+    padding-bottom: 1.5px;
+    mix-blend-mode: darken;
+}
+
+#hour span {
+    background-color: #a2e5c390;
+}
+
+#minute span {
+    background-color: #68b8c290;
+}
+
+#second span {
+    background-color: #30778990;
+}
+
 #second,
 #minute,
 #hour {

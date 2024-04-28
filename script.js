@@ -82,6 +82,9 @@ setInterval(updateTime, 1000);
 //random minute dot location
 function minLocation() {
 let minutes = document.querySelectorAll(".minDot")
+let today = new Date();
+let thisSecond = today.getSeconds();
+if(thisSecond == 0) {
 for (let minute of minutes) {
     let randomTop = Math.random() * 100;
     let randomLeft = Math.random() * 100;
@@ -89,11 +92,16 @@ for (let minute of minutes) {
     minute.style.left = randomLeft + "vw";
 }
 }
-setInterval(minLocation, 5000);
+}
+setInterval(minLocation, 1000);
 
 //random hour dot location
 function hourLocation() {
 let hours = document.querySelectorAll(".hourDot")
+let today = new Date();
+let thisMinute = today.getMinutes();
+let thisSecond = today.getSeconds();
+if(thisMinute == 0 && thisSecond == 0) {
 for (let hour of hours) {
     let randomTop = Math.random() * 100;
     let randomLeft = Math.random() * 100;
@@ -101,7 +109,8 @@ for (let hour of hours) {
     hour.style.left = randomLeft + "vw";
 }
 }
-setInterval(hourLocation, 12000);
+}
+setInterval(hourLocation, 1000);
 
 //get current and time
 let today = new Date();

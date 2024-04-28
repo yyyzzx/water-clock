@@ -40,6 +40,7 @@ body {
     z-index: 1;
     line-height: 80pt;
     transition:  2s;
+    /* mix-blend-mode: overlay; */
 }
 
 #timeHere:hover,
@@ -92,6 +93,7 @@ body {
     position: absolute;
     border-radius: 100%;
     transition: 1s ease-in-out;
+    mix-blend-mode: screen;
 }
 
 .secDot {
@@ -208,6 +210,27 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#hour span,
+#minute span,
+#second span {
+    border-radius: 20px;
+    padding: 0 5px;
+    padding-bottom: 1.5px;
+    mix-blend-mode: darken;
+}
+
+#hour span {
+    background-color: #a2e5c390;
+}
+
+#minute span {
+    background-color: #68b8c290;
+}
+
+#second span {
+    background-color: #30778990;
 }
 
 #second,
