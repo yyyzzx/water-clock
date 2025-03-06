@@ -164,7 +164,7 @@ body {
     height: 62vh;
     width: 80vw;
     border: black dotted 3px;
-    border-radius: 10vw 1vw;
+    border-radius: 5vw;
     font-family: "Dusseldot";
     font-size: 12pt;
     font-variation-settings: "wght" 200, "wdth" 150;
@@ -366,6 +366,9 @@ body {
         line-height: 4vw;
         margin: 0;
         top: 2vw;
+    }
+    #about .explanation {
+        font-size: clamp(5pt, 1.1vw, 1.3vw);
     }
     .dot {
         height: clamp(1.2vw, 1.5vw, 10pt);

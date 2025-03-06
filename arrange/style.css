@@ -360,6 +360,9 @@ body {
         margin: 0;
         top: 2vw;
     }
+    #about .explanation {
+        font-size: clamp(5pt, 1.1vw, 1.3vw);
+    }
     .dot {
         height: clamp(1.2vw, 1.5vw, 10pt);
         width: clamp(1.2vw, 1.5vw, 10pt);
